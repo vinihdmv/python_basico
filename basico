@@ -1,0 +1,57 @@
+'''altura = float(input("Digite sua altura"))
+
+peso=float(input("Digite seu peso"))
+
+calculo=peso/(altura*altura)
+print(f"Seu IMC é igual a {calculo}")'''
+
+'''================================================================='''
+
+'''x= int(input("escolha um numero de 0-10 \n"))
+if x==3 and x==8 :
+    print("vc selecionou numeros ruins\n")
+elif x==9 and x==10 and x==1 and x==6:
+    print("bons numeros\n")
+else:
+    print("seu numero é muito ruim\n")'''
+
+'''================================================================='''
+
+'''x=float(8.4)
+y=float(4.9)
+z=float(5.0)
+
+
+if x>=5:
+    print("você foi aprovado")
+elif x<=5:
+    print("você foi reprovado")
+
+if y>=5:
+    print("você foi aprovado")
+elif y<=5:
+    print("você foi reprovado")
+
+if z >= 5:
+        print("você foi aprovado")
+elif z <= 5:
+        print("você foi reprovado")'''
+
+'''================================================================='''
+
+#PARA RECEBA!!!
+
+'''print("Escreva a nota de seu grupo e veja se passaram \n")
+nota1=int(input("Escreva a nota do primeiro membro"))
+nota2=int(input("Escreva a nota do segundo membro"))
+nota3=int(input("Escreva a nota do terceiro membro"))
+
+calculo=(nota1+nota2+nota3)/3
+
+print("sua média é", calculo) 
+if calculo <= 7:
+    print("seu grupo está reprovado")
+elif calculo >= 7:
+    print("seu grupo está aprovado")'''
+
+'''================================================================='''
