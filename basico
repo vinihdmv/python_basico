@@ -160,3 +160,22 @@ else: print('Operação invalida')
 '''
 
 '''====================================================================================================='''
+
+'''quantidade = int(input('quantidade:'))
+
+media=0
+for i in range(quantidade):
+
+    nota = float(input('Nota:'))
+    media += nota
+media = media/quantidade
+print(f'Média:{media/quantidade:.2f}')'''
+
+'''
+x=int(input('Numeros:'))
+
+for i in range (x):
+    numero= int(input('Qual é o numero:'))
+    if numero <=0:
+        numero=1
+    else: print(numero)'''
