@@ -39,7 +39,7 @@ elif z <= 5:
 
 '''================================================================='''
 
-#PARA RECEBA!!!
+#RECEBA
 
 '''print("Escreva a nota de seu grupo e veja se passaram \n")
 nota1=int(input("Escreva a nota do primeiro membro"))
@@ -55,3 +55,62 @@ elif calculo >= 7:
     print("seu grupo está aprovado")'''
 
 '''================================================================='''
+
+
+'''
+#RECEBA
+
+calculo da area de um triangulo
+
+altura=float(input("Escreva a altura de seu triangulo \n"))
+base=float(input("Escreva a base do seu triangulo\n"))
+area_calc=(base*altura)/2
+print(f"Seu triangulo de altura {altura} e base {base} tem área igual á {area_calc:.1f}")'''
+
+
+'''====================================================================================================='''
+
+'''num=float(input("escreva um num e te diremos se ele é par ou impar\n"))
+if num%2==0:
+    print(f"{num} é par")
+elif num%2!=0:
+    print(f"{num} é impár")
+else:
+   print("seu numero é indivisel aos reais")'''
+
+
+'''====================================================================================================='''
+
+'''
+#RECEBA
+def calculadora (n1, n2):
+ if x==1:
+    return n1+n2
+   
+ elif x==2:
+    return n1-n2
+   
+ elif x==3:
+    return n1/n2
+    
+ elif x==4:
+    return n1*n2
+
+
+print('escreva uma operação que você deseja:\n')
+print(' 1-para soma\n 2-subtração\n 3-divisão\n 4-multiplicação')
+
+x=int(input('digite o numero de sua operação----->    '))
+if x >= 5:
+ print('O número escolhido não representa uma operação válida ☻')
+
+else:
+ n1=float(input('Escreva o primeiro numero\n'))
+ n2=float(input('escreva o segundo numero\n'))
+
+resultado=calculadora(n1,n2)
+print('Resultado da operação escolhida:',resultado) '''
+
+
+
+'''====================================================================================================='''
