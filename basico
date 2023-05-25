@@ -5,7 +5,7 @@ peso=float(input("Digite seu peso"))
 calculo=peso/(altura*altura)
 print(f"Seu IMC é igual a {calculo}")'''
 
-'''================================================================='''
+'''==============================================================================================='''
 
 '''x= int(input("escolha um numero de 0-10 \n"))
 if x==3 and x==8 :
@@ -15,8 +15,8 @@ elif x==9 and x==10 and x==1 and x==6:
 else:
     print("seu numero é muito ruim\n")'''
 
-'''================================================================='''
-
+'''================================================================================================'''
+                                           Aprovado ou não (Parâmetros)
 '''x=float(8.4)
 y=float(4.9)
 z=float(5.0)
@@ -37,8 +37,8 @@ if z >= 5:
 elif z <= 5:
         print("você foi reprovado")'''
 
-'''================================================================='''
-
+'''=================================================================================================='''
+                                                        Média
 #RECEBA
 
 '''print("Escreva a nota de seu grupo e veja se passaram \n")
@@ -54,8 +54,8 @@ if calculo <= 7:
 elif calculo >= 7:
     print("seu grupo está aprovado")'''
 
-'''================================================================='''
-
+'''==================================================================================================='''
+                                                    Área de trângulo
 
 '''
 #RECEBA
@@ -70,6 +70,8 @@ print(f"Seu triangulo de altura {altura} e base {base} tem área igual á {area_
 
 '''====================================================================================================='''
 
+                                                      Par e ímpar
+
 '''num=float(input("escreva um num e te diremos se ele é par ou impar\n"))
 if num%2==0:
     print(f"{num} é par")
@@ -80,7 +82,7 @@ else:
 
 
 '''====================================================================================================='''
-
+                                                     Calculadora
 '''
 #RECEBA
 def calculadora (n1, n2):
@@ -112,5 +114,37 @@ resultado=calculadora(n1,n2)
 print('Resultado da operação escolhida:',resultado) '''
 
 
+
+'''====================================================================================================='''
+                                                Conversão de Temp
+
+'''
+def conversao (tempC, tempF):
+    if x==1:
+        return (1.8*tempC)+32
+    elif x==2:
+        return (tempF-32)/1.8
+    else:
+        print(' numero da operação inválida')
+
+
+
+print('conversor de Celisus para Farenheint e Fareheint para Celsius\n')
+
+
+x=int(input('Para:  Celsius para farenheit   digite (1)\n''Para:  farenheit para Celsius   digite (2)\n'))
+
+if x==1:
+   tempC=float(input('Escreva sua temperatura em Celsius------>'))
+   resultado=conversao(tempC,0)
+   print(f'Agora a sua tempereatura em farenheit é de: {resultado} ')
+elif x==2:
+    tempF=float(input('Escreva sua temperatura em farenheit------>'))
+    resultado=conversao(0,tempF)
+    print(f'Agora a sua tempereatura em Celisus é de:{resultado}')
+
+else: print('Operação invalida')
+
+'''
 
 '''====================================================================================================='''
