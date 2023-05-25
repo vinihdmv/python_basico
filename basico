@@ -60,13 +60,25 @@ elif calculo >= 7:
 '''
 #RECEBA
 
-calculo da area de um triangulo
+
+#calculo da area de um triangulo; 
+
+'''Com input:'''
 
 altura=float(input("Escreva a altura de seu triangulo \n"))
 base=float(input("Escreva a base do seu triangulo\n"))
 area_calc=(base*altura)/2
 print(f"Seu triangulo de altura {altura} e base {base} tem área igual á {area_calc:.1f}")'''
 
+'''Sem imput:'''
+
+def areaT (base, alt):
+    return (base*alt)/2
+
+#Bases e alturas escolhidas:
+
+area_final=areaT(base=4,alt=5)
+print(f'Seu triangulo tem área igual a:{area_final}') '''
 
 '''====================================================================================================='''
 
