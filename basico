@@ -200,4 +200,101 @@ lista.insert(4,2)
 print(lista)
 
 len(lista)
-print(len)'''
+print(len)''' 
+
+ '''====================================================================================================='''
+ 
+ '''
+print('============= Contador de Medias ================')
+
+nota=int()
+media=int()
+i=0
+
+
+while nota != -1:
+    nota=int(input('Escreva sua nota------>'))
+
+    if nota == -1:
+        break
+    else:
+        media  += nota
+        i+=1
+
+    media =media/i
+
+print('Meida de notas é igual', media)
+
+
+print('==================================')
+
+print(i)'''
+
+
+
+'''
+nota=int()
+media=int()
+i=0
+
+
+while nota != -1: # Se a condição nota fosse True, ela retornaria com o continue, haja vista que a condição não se encerraria
+    nota=int(input('Escreva sua nota------>'))
+
+    if nota == -1:
+        continue
+    else:
+        media  += nota
+        i+=1
+
+    media =media/i
+
+print('Meida de notas é igual', media)'''
+
+
+maior_nota = 0
+nota = 0
+soma_notas = 0
+contador = 0
+aprovados = 0
+reprovados= 0
+qtd_notas = 0
+
+
+valor_de_saida = float(input("Entre com o valor de saída: "))
+
+
+while nota != valor_de_saida:
+   nota = float(input("Digite a nota do aluno: "))
+
+
+   if nota == valor_de_saida:
+       break
+   soma_notas += nota
+   qtd_notas += 1
+
+
+   if nota > maior_nota:
+       contador = 1
+       maior_nota = nota
+
+   elif nota == maior_nota:
+       contador+=1
+
+
+   if nota < 5:
+       reprovados+=1
+
+
+   else:
+       aprovados+=1
+
+
+print("Alunos APROVADOS: ", aprovados)
+print("\nAlunos REPROVADOS: ", reprovados)
+print("\nMaior nota: {:.2f}\nQuantidade da nota: {}\n".format( maior_nota, contador))
+if qtd_notas > 0:
+   print("Media da turma: ", soma_notas // qtd_notas)
+   
+ '''====================================================================================================='''
+
