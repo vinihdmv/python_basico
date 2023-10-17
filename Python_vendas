@@ -1,0 +1,109 @@
+import matplotlib.pyplot as plt
+
+# Função para ler os dados de quantidades vendidas
+def ler_dados():
+    vendas = {}
+    for i in range(1, 10):
+        quantidade = int(input(f"Digite a quantidade vendida da mercadoria {i}: "))
+        vendas[i] = quantidade
+    return vendas
+
+# Função para calcular o faturamento
+def calcular_faturamento(vendas, precos):
+    faturamento = 0
+    for mercadoria, quantidade in vendas.items():
+        faturamento += quantidade * precos[mercadoria]
+    return faturamento
+
+# Função para imprimir o faturamento e percentuais de vendas
+def imprimir_faturamento(vendas, precos):
+    faturamento = calcular_faturamento(vendas, precos)
+    print("Faturamento Mensal:")
+    for mercadoria, quantidade in vendas.items():
+        preco = precos[mercadoria]
+        total = quantidade * preco
+        print(f"Mercadoria {mercadoria}: {quantidade} unidades x R${preco} = R${total}")
+    print(f"Total Faturado: R${faturamento}")
+    print("\nPercentuais de Vendas:")
+    for mercadoria, quantidade in vendas.items():
+        percentual = (quantidade * precos[mercadoria] / faturamento) * 100
+        print(f"Mercadoria {mercadoria}: {percentual:.2f}%")
+
+# Função para gravar os dados das vendas em um arquivo de texto
+def gravar_dados(vendas,faturamento):
+    with open("vendas.txt", "w") as arquivo:
+        for mercadoria, quantidade in vendas.items():
+            arquivo.write(f"Mercadoria {mercadoria}: {quantidade} unidades\n")
+            arquivo.write(f"Total Faturado: R${faturamento}\n")
+
+# Função para imprimir um gráfico das cinco mercadorias mais vendidas
+def imprimir_grafico(vendas):
+    # Ordena as mercadorias pelo número de unidades vendidas
+    mercadorias_ordenadas = sorted(vendas.items(), key=lambda x: x[1], reverse=True)
+    top_5_mercadorias = mercadorias_ordenadas[:5]
+    mercadorias = [f"Mercadoria {mercadoria}" for mercadoria, _ in top_5_mercadorias]
+    quantidades = [quantidade for _, quantidade in top_5_mercadorias]
+
+    plt.bar(mercadorias, quantidades)
+    plt.xlabel("Mercadorias")
+    plt.ylabel("Quantidade Vendida")
+    plt.title("As Cinco Mercadorias Mais Vendidas")
+    plt.show()
+
+# Função para criar a tabela de preços
+def criar_tabela_precos():
+    precos = {}
+    for i in range(1, 10):
+        preco = float(input(f"Digite o preço da mercadoria {i}: "))
+        precos[i] = preco
+    return precos
+
+# Função para exibir o menu
+def exibir_menu():
+    print("\nMenu:")
+    print("1. Criar tabela de preços")
+    print("2. Inserir dados de vendas")
+    print("3. Calcular faturamento e percentuais de vendas")
+    print("4. Gravar dados em um arquivo")
+    print("5. Gerar gráfico das cinco mercadorias mais vendidas")
+    print("6. Sair")
+    opcao = input("Escolha uma opção: ")
+    return opcao
+
+# Função principal
+def main():
+    precos = {}
+    vendas = {}
+
+    while True:
+        opcao = exibir_menu()
+
+        if opcao == "1":
+            precos = criar_tabela_precos()
+        elif opcao == "2":
+            vendas = ler_dados()
+        elif opcao == "3":
+            if vendas:
+                imprimir_faturamento(vendas, precos)
+            else:
+                print("Você precisa inserir os dados de vendas primeiro (Opção 2).")
+        elif opcao == "4":
+            if vendas:
+                faturamento = calcular_faturamento(vendas, precos)
+                gravar_dados(vendas, faturamento)
+                print("Dados de vendas gravados com sucesso.")
+            else:
+                print("Você precisa inserir os dados de vendas primeiro (Opção 2).")
+        elif opcao == "5":
+            if vendas:
+                imprimir_grafico(vendas)
+            else:
+                print("Você precisa inserir os dados de vendas primeiro (Opção 2).")
+        elif opcao == "6":
+            print("Saindo do programa. Obrigado!")
+            break
+        else:
+            print("Opção inválida. Escolha uma opção válida.")
+
+if __name__ == "__main__":
+    main()
